@@ -1,4 +1,4 @@
 Name: Onileowo Taiwo Olasubmi
 Matric number: 23CG034136
-Live URL of hosted application:
-GitHub repository link:
+Live URL of hosted application: https://llm-qa-project-onileowotaiwo-23cg034136.onrender.com/
+GitHub repository link:https://github.com/TaiwoOnileowo/LLM_QA_Project_ONILEOWOTAIWO_23CG034136
