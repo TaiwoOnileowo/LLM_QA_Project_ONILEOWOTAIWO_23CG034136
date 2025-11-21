@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP Q&A System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>NLP Question-Answering System</h1>
+        <p>Ask a question to the LLM API</p>
+        
+        <form method="POST" action="/">
+            <div class="form-group">
+                <input type="text" name="question" placeholder="Enter your question here..." required value="{{ question if question else '' }}">
+                <button type="submit">Ask</button>
+            </div>
+        </form>
+
+        {% if question %}
+        <div class="results">
+            <div class="result-box">
+                <h3>Original Question:</h3>
+                <p>{{ question }}</p>
+            </div>
+            
+            <div class="result-box">
+                <h3>Processed Input:</h3>
+                <p><strong>Text:</strong> {{ processed_text }}</p>
+                <p><strong>Tokens:</strong> {{ tokens }}</p>
+            </div>
+
+            <div class="result-box answer-box">
+                <h3>LLM Response:</h3>
+                <p>{{ answer }}</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
